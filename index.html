@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        input[type=button]{
+            width: 130px; height: 40px;
+            font-weight: bold;
+            background-color:rgb(39, 114, 39); color: white;
+            cursor: pointer; /*muestra una mano*/
+            border-radius: 5px;
+
+        }
+    </style>
+    <script>
+        function mostrar(op){
+            switch(op){
+                case 1: //bateria
+                    document.getElementById('imgHar').src="https://firebasestorage.googleapis.com/v0/b/restaurant-4f5ec.appspot.com/o/bateria.jpg?alt=media&token=33df44c7-bcb8-4ea0-b656-3bb77baeb2d0";
+                    break
+                case 2: //puertos
+                    document.getElementById('imgHar').src="https://firebasestorage.googleapis.com/v0/b/restaurant-4f5ec.appspot.com/o/puertos.png?alt=media&token=203aa02d-5c13-4c81-8dc7-7ba79e17b6d7"
+                    break
+                case 3: //placa madre
+                    document.getElementById('imgHar').src="https://firebasestorage.googleapis.com/v0/b/restaurant-4f5ec.appspot.com/o/motherboard5.JPG?alt=media&token=b3828e26-3aef-46de-bb39-b5466fa2e1aa"
+                    break
+                case 4: //discoSSD
+                    document.getElementById('imgHar').src="https://firebasestorage.googleapis.com/v0/b/restaurant-4f5ec.appspot.com/o/discoSSD.jpg?alt=media&token=33c51e2f-4ef1-4fe3-9e38-7d882b051f71"
+                    break
+                case 5: //cable sata    
+                    document.getElementById('imgHar').src="https://firebasestorage.googleapis.com/v0/b/restaurant-4f5ec.appspot.com/o/cable-sata.jpg?alt=media&token=b98b69bd-5256-408d-a241-336ecae9bbe6"
+                    break               
+            }
+        }
+    </script>
+</head>
+<body>
+    <div style="padding-left:300px;">
+        <img height="100px" src="https://firebasestorage.googleapis.com/v0/b/restaurant-4f5ec.appspot.com/o/logo.jpg?alt=media&token=9f3c5780-23aa-452a-b191-dfdf07d39e6b" alt="">
+    </div>
+    <div style="text-align:center; ">
+        <img width="70%" style="border-radius:10px ;" src="https://firebasestorage.googleapis.com/v0/b/restaurant-4f5ec.appspot.com/o/banner.jpg?alt=media&token=e9d787a8-3be1-44ac-b005-15ae7f0bce2f" alt="">
+    </div>
+    <h1>TUTORIAL DE HARDWARE</h1>
+    <div style="text-align:center ; " >
+        <input type="button" onclick="mostrar(1);" value="Bateria">
+        <input type="button" onclick="mostrar(2);" value="Puertos">
+        <input type="button" onclick="mostrar(3);" value="Placa madre">
+        <input type="button" onclick="mostrar(4);" value="DiscoSSD">
+        <input type="button" onclick="mostrar(5);" value="Cable Sata">
+        <a href="login.html"><img style="margin-left:150px ; vertical-align: middle;"  width="80px" src="https://firebasestorage.googleapis.com/v0/b/restaurant-4f5ec.appspot.com/o/login05.jpg?alt=media&token=03594e55-adac-437e-b19e-224f41046159" alt=""></a> 
+
+    </div>
+    <div style="text-align: center; margin-top: 20px;">
+        <img width="50%" src="https://firebasestorage.googleapis.com/v0/b/restaurant-4f5ec.appspot.com/o/bateria.jpg?alt=media&token=33df44c7-bcb8-4ea0-b656-3bb77baeb2d0" alt="" id="imgHar">
+    </div>
+</body>
+</html>

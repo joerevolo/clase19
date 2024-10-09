@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <style>
+        table{
+            width: 40%; margin: auto;
+        }
+        input[type=text]{
+            width: 30px;
+            padding: 10px;
+        }
+        h1{
+            text-align: center;
+        }
+        input[type=button]{
+            background-color: rgb(66, 105, 145);
+            color: white;
+            padding: 8px;
+            width: 100px; 
+            border-radius: 5px;
+        }
+    </style>
+    <script>
+        function nuevo(){
+            document.getElementById('txtP1').value='';
+            document.getElementById('txtP2').value='';
+            document.getElementById('txtP3').value='';
+            document.getElementById('txtProm').value='';
+            document.getElementById('txtP1').focus();
+        }
+        function calcular(){
+            let p1 = document.getElementById('txtP1').value;
+            let p2 = document.getElementById('txtP2').value;
+            let p3 = document.getElementById('txtP3').value;
+            let pro = (parseFloat(p1) + parseFloat(p2) + parseFloat(p3))/3;
+            document.getElementById('txtProm').value=pro.toFixed(1);
+
+        }
+    </script>
+</head>
+<body>
+    <div style="text-align:center; ">
+        <img width="70%" style="border-radius:10px ;" src="https://firebasestorage.googleapis.com/v0/b/restaurant-4f5ec.appspot.com/o/banner.jpg?alt=media&token=e9d787a8-3be1-44ac-b005-15ae7f0bce2f" alt="">
+    </div>
+    <h1>REGISTRO DE NOTAS</h1>    
+    <table>
+        <tr>
+            <td>Practica 1</td>
+            <td>
+                <input type="text" name="" id="txtP1">
+            </td>
+        </tr>
+        <tr>
+            <td>Practica 2</td>
+            <td>
+                <input type="text" name="" id="txtP2">
+            </td>
+        </tr>
+        <tr>
+            <td>Practica 3</td>
+            <td>
+                <input type="text" name="" id="txtP3">
+            </td>
+        </tr>
+        <tr>
+            <td>Promedio</td>
+            <td>
+                <input type="text" name="" id="txtProm" disabled>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="button" onclick="calcular();" value="Calcular">
+            </td>
+            <td>
+                <input type="button" onclick="nuevo();" value="Nuevo">
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
